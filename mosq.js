@@ -4,11 +4,12 @@ let sec = document.getElementById("secCurrentTime");
 
 setInterval(()=>{
     const currentTime = new Date();
-    // console.log(currentTime.getHours());
-    hr.innerHTML = currentTime.getHours();
-    min.innerHTML = currentTime.getMinutes();
-    sec.innerHTML = currentTime.getSeconds();
+    
+    hr.innerHTML = currentTime.getHours() < 10 ? `0${currentTime.getHours()}` : currentTime.getHours();
+    min.innerHTML = currentTime.getMinutes()  < 10 ? `0${currentTime.getMinutes()}` : currentTime.getMinutes();
+    sec.innerHTML = currentTime.getSeconds()  < 10 ? `0${currentTime.getSeconds()}` : currentTime.getSeconds();
 },1000)
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // IDs of the editable Adhan and Iqamah times
