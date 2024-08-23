@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/data/islamic-background-with-crescent-lantern-ramadan-eid-background-islamic-traditional-ornament_71956-56761-transformed.jpeg'); /* Path to your image */
+    background-image: url(/data/mosqAppBG.jpeg); /* Path to your image */
     background-size: cover;  /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
