@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/mosqAppBG.jpeg); /* Path to your image */
+    background-image: url(/data/mosqAppBG.jpeg); /* Path to your image */
     background-size: cover;  /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
@@ -46,9 +46,37 @@ body {
     border-radius: 4px;
 }
 
+#fullscreenToggleBtn {
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 8px;
+    cursor: pointer; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#qrCodeImage {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 20px; /* 20px from the bottom of the screen */
+    right: 20px; 
+    width: 100px; 
+    height: auto; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+#fullscreenToggleBtn:hover {
+    background-color: #45a049; 
+}
+
+
 /* For larger mobile devices and small tablets (e.g., iPad Mini, etc.) */
 @media only screen and (min-width: 550px) and (max-width: 1080px) {
-    /* CSS styles for larger mobile devices */
     .current-time {
         font-size: 3em;
     }
@@ -58,7 +86,6 @@ body {
   }
 
 @media only screen and (max-width: 549px) {
-    /* CSS styles for larger mobile devices */
     .current-time {
         font-size: 2em;
     }
