@@ -55,3 +55,42 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const fullscreenToggleBtn = document.getElementById('fullscreenToggleBtn');
+
+fullscreenToggleBtn.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+        // Enter fullscreen
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+            document.documentElement.msRequestFullscreen();
+        }
+        fullscreenToggleBtn.textContent = 'Exit Fullscreen';
+    } else {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+            document.msExitFullscreen();
+        }
+        fullscreenToggleBtn.textContent = 'Go Fullscreen';
+    }
+});
+
+// Optional: Listen for changes in fullscreen state
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        fullscreenToggleBtn.textContent = 'Go Fullscreen';
+    } else {
+        fullscreenToggleBtn.textContent = 'Exit Fullscreen';
+    }
+});
