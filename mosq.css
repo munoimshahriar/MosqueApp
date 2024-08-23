@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/data/islamic-background-with-crescent-lantern-ramadan-eid-background-islamic-traditional-ornament_71956-56761-transformed.jpeg'); /* Path to your image */
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.current-time {
+    font-size: 6em;
+    background-color: #dbf9d397;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 10px;
+    background-color: #3fded963;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.grid-item {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 43px;
+}
+
+.header {
+    font-weight: bold;
+    background-color: #c6fff86f;
+    border-radius: 4px;
+}
+
+/* For larger mobile devices and small tablets (e.g., iPad Mini, etc.) */
+@media only screen and (min-width: 550px) and (max-width: 1080px) {
+    /* CSS styles for larger mobile devices */
+    .current-time {
+        font-size: 3em;
+    }
+    .grid-item{
+        font-size: 25px;
+    }
+  }
+
+@media only screen and (max-width: 549px) {
+    /* CSS styles for larger mobile devices */
+    .current-time {
+        font-size: 2em;
+    }
+    .grid-item{
+        font-size: 20px;
+    }
+    .grid-container{
+        padding: 10px 3px 10px 3px ;
+    }
+    .grid-item header{
+        padding: 4px;
+    }
+  }

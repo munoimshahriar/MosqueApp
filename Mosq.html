@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Salah Time </title>
+    <link rel="stylesheet" href="mosq.css">
+</head>
+<body>
+    <!-- This is the clock -->
+    <div class="time-container">
+        <div class="current-time" id="currentTime">
+            <div>
+                <span id="hrCurrentTime">00</span>
+                <span>:</span>
+                <span id="minCurrentTime">00</span>
+                <span>:</span>
+                <span id="secCurrentTime">00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <!-- Headers -->
+        <div class="grid-item header">Prayer</div>
+        <div class="grid-item header">Adhan</div>
+        <div class="grid-item header">Iqamah</div>
+        <div class="grid-item header">End</div>
+
+        <!-- Fajr -->
+        <div class="grid-item">Fajr</div>
+        <div class="grid-item" id="fajrAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="fajrIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="fajrEnd" contenteditable="true">12:35</div>
+
+        <!-- Zohor -->
+        <div class="grid-item">Zohor</div>
+        <div class="grid-item" id="zohorAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="zohorIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="zohorEnd" contenteditable="true">12:35</div>
+
+        <!-- Asr -->
+        <div class="grid-item">Asr</div>
+        <div class="grid-item" id="asrAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="asrIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="asrEnd" contenteditable="true">12:35</div>
+
+        <!-- Maghrib -->
+        <div class="grid-item">Maghrib</div>
+        <div class="grid-item" id="maghribAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="maghribIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="maghribEnd" contenteditable="true">12:35</div>
+
+        <!-- Esha -->
+        <div class="grid-item">Esha</div>
+        <div class="grid-item" id="eshaAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="eshaIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="eshaEnd" contenteditable="true">12:35</div>
+
+         <!-- Jumma -->
+        <div class="grid-item">Jumma</div>
+        <div class="grid-item" id="jummaAdhan" contenteditable="true">12:00</div>
+        <div class="grid-item" id="jummaIqamah" contenteditable="true">12:15</div>
+        <div class="grid-item" id="jummaEnd" contenteditable="true">12:35</div>
+    </div>
+
+    <!-- <form>
+        <label for="hrInput"> Hour </label>
+        <input type="nuamber" id="hrInput" placeholder="00">
+        <label for="minInput"> Minute </label>
+        <input type="number" id="minInput" placeholder="00">
+        <label for="secInput"> Srcond </label>
+        <input type="number" id="secInput" placeholder="00">
+
+        <button> Add New </button>
+    </form> -->
+
+
+
+
+</body>
+<script src="mosq.js"></script>
+</html>
